@@ -54,8 +54,8 @@
 }
 
 .bgTitleTryAgain {
-  width: min(90vw, 310px); /* Увеличили ширину */
-  height: min(35vh, 160px); /* Увеличили высоту */
+  width: min(90vw, 310px); 
+  height: min(35vh, 160px); 
   background-image: url('../../assets/Outer Glow Try Again.png');
   background-size: contain;
   background-position: center;
@@ -67,13 +67,13 @@
 }
 
 .titleTryAgain {
-  width: min(50vw, 200px); /* Увеличили ширину */
-  height: min(10vh, 20px); /* Увеличили высоту */
+  width: min(50vw, 200px); 
+  height: min(10vh, 20px); 
   background-image: url('../../assets/Try Again Text.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  /* Подкорректировали отступ */
+  
 }
 
 .titleContainer {
@@ -90,8 +90,9 @@
 }
 
 .titleOps {
-  width: min(23vw, 100px);
-  height: min(5vh, 30px);
+  width: 40%; 
+  height: 0;
+  padding-bottom: 8%; 
   background-image: url('../../assets/OopsText.png');
   background-size: contain;
   background-position: center;
@@ -100,8 +101,9 @@
 }
 
 .titleTimesOut {
-  width: 50vw;
-  height: 3vh;
+  width: 60%; 
+  height: 0;
+  padding-bottom: 5%; 
   background-image: url('../../assets/Time_s\ Up\ Text.png');
   background-size: contain;
   background-position: center;
