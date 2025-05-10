@@ -1,0 +1,212 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(90vw, 400px);
+  max-height: 90vh;
+}
+
+.popupContent {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.platformImage {
+  width: 100%;
+  min-height: 300px;
+  max-height: 360px;
+  aspect-ratio: 2/1;
+  background-image: url('../../assets/Time_s\ Up\ Platform.png');
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: -15%; 
+}
+
+.tryAgainSection {
+  position: absolute;
+  top: -5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  transform: scale(1.5);
+  transform-origin: center top;
+}
+
+.bgTitleTryAgain {
+  width: min(90vw, 310px); /* Увеличили ширину */
+  height: min(35vh, 160px); /* Увеличили высоту */
+  background-image: url('../../assets/Outer Glow Try Again.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
+.titleTryAgain {
+  width: min(50vw, 200px); /* Увеличили ширину */
+  height: min(10vh, 20px); /* Увеличили высоту */
+  background-image: url('../../assets/Try Again Text.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Подкорректировали отступ */
+}
+
+.titleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 9%;
+}
+
+.titleOps {
+  width: min(23vw, 100px);
+  height: min(5vh, 30px);
+  background-image: url('../../assets/OopsText.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.titleTimesOut {
+  width: 50vw;
+  height: 3vh;
+  background-image: url('../../assets/Time_s\ Up\ Text.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+.buttonsWrapper {
+  width: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: min(3vw, 20px) min(3vw, 20px) min(4vw, 25px);
+  margin-top: -10%;
+  position: relative;
+  z-index: 3;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: min(4vw, 20px);
+  margin-top: min(2vh, 15px);
+}
+
+.button {
+  border: none;
+  width: min(35vw, 140px);
+  height: min(10vh, 50px);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s;
+  padding: 0;
+  background-color: transparent;
+}
+
+.quitButton {
+  background-image: url('../../assets/Quit\ Button.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.restartButton {
+  background-image: url('../../assets/Restart\ Button.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.btnLabelQuit,
+.btnLabelRestart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.btnLabelQuit {
+  background-image: url('../../assets/Quit\ Button\ Text.png');
+    width: 13vw;
+    height: 70vh;
+}
+
+.btnLabelRestart {
+  background-image: url('../../assets/Restart\ Text.png');
+    width: 18vw;
+    height: 70vh;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-height: 600px) {
+  .platformImage {
+    min-height: 120px;
+    aspect-ratio: 2.2/1;
+  }
+  
+  .titleContainer {
+    padding-top: 12%;
+  }
+}
+
+@media (orientation: landscape) {
+  .popupContainer {
+    max-width: 70vw;
+  }
+  
+  .platformImage {
+    aspect-ratio: 1.8/1;
+    margin-bottom: -10%;
+  }
+  
+  .buttonsWrapper {
+    margin-top: -8%;
+  }
+}
